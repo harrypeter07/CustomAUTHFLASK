@@ -79,6 +79,7 @@ body {
 	box-shadow: var(--box-shadow);
 	width: 100%;
 	height: 60vh; /* Larger canvas */
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -91,7 +92,10 @@ canvas {
 	height: 100% !important; /* Force 100% height */
 	object-fit: contain;
 }
-
+.canvas {
+	height: 100%;
+	width: 100%;
+}
 /* Sidebar */
 .sidebar {
 	grid-area: sidebar;
@@ -103,9 +107,9 @@ canvas {
 	flex-direction: column;
 }
 
+
 /* Header with theme toggle */
 /* Updated Editor Header */
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -1053,4 +1057,22 @@ button.tool-btn[onclick="generateJSON"] {
 
 .theme-toggle i {
 	margin-right: 8px;
+}
+
+#popup {
+	position: fixed;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(40, 40, 40, 0.95);
+	color: #fff;
+	padding: 12px 32px;
+	border-radius: 8px;
+	font-size: 1.1rem;
+	z-index: 9999;
+	display: none;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+	pointer-events: none;
+	min-width: 200px;
+	text-align: center;
 }
